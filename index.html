@@ -672,7 +672,7 @@ Include 3-4 strength/training days appropriate to experience and equipment, and 
     state.activeDay = 0;
     state.screen = 'home'; state.tab='today';
   }catch(e){
-    alert('Norvix had trouble building your plan. Please try again.');
+    alert('Norvix had trouble building your plan: ' + e.message);
     state.screen = state.weekplan ? 'home' : 'generate-first';
   }
   state.busy = false; render();
